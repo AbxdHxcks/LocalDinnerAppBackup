@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Calender.cs" />
+    <Compile Include="Model\Reservation.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\LocalDinnerViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
