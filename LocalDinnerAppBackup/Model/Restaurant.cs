@@ -12,17 +12,15 @@ namespace LocalDinnerAppBackup.Model
         public int Id { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
-        public string Category { get; set; }
         public int NoOfSeats { get; set; }
         #endregion
 
         #region Constructor
-        public Restaurant(int id, string name, string city, string category, int noOfSeats)
+        public Restaurant(int id, string name, string city, int noOfSeats)
         {
             Id = id;
             Name = name;
             City = city;
-            Category = category;
             NoOfSeats = noOfSeats;
         }
         #endregion
@@ -31,7 +29,7 @@ namespace LocalDinnerAppBackup.Model
 
         public override string ToString()
         {
-            return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(City)}: {City}, {nameof(Category)}: {Category}, {nameof(NoOfSeats)}: {NoOfSeats}";
+            return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(City)}: {City}, {nameof(NoOfSeats)}: {NoOfSeats}";
         }
         #endregion 
     }

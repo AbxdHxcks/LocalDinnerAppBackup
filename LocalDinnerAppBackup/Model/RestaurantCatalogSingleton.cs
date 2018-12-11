@@ -28,10 +28,10 @@ namespace LocalDinnerAppBackup.Model
 
         public void LoadRestaurants()
         {
-            Restaurants.Add(new Restaurant());
-            Restaurants.Add(new Restaurant());
-            Restaurants.Add(new Restaurant());
-            Restaurants.Add(new Restaurant());
+            Restaurants.Add(new Restaurant(1, "Ilden", "Roskilde", 50));
+            Restaurants.Add(new Restaurant(2, "Jensen's Bøfhus", "Holbæk", 60));
+            Restaurants.Add(new Restaurant(3, "Karma Sushi", "København", 70));
+            Restaurants.Add(new Restaurant(4, "Siang Jiang", "Slagelse", 50));
         }
 
         public void RestaurantsByCity(string cityName)
@@ -41,6 +41,16 @@ namespace LocalDinnerAppBackup.Model
                 if (res.City == cityName)
                     RestaurantsCity.Add(res);
             }
+        }
+
+        public void AddRestaurant(Restaurant res)
+        {
+            Restaurants.Add(res);
+        }
+
+        public void RemoveRestaurant(Restaurant res)
+        {
+            Restaurants.RemoveAt(res.Id);
         }
     }
 }
